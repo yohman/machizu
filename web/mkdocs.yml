@@ -1,0 +1,29 @@
+site_name: MaChiZu
+theme:
+  name: material
+  # logo: images/logo.jpg
+  use_directory_urls: true
+  scheme: slate
+  palette:
+    primary: "white"
+    accent: "amber"
+
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  language: "en"
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.indexes
+extra:
+  generator: false
+
+extra_css:
+  - css/style.css
+# extra_javascript:
+#   - js/carousel.js
+
+markdown_extensions: 
+  - attr_list
+  - md_in_html
