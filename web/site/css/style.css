@@ -1,0 +1,202 @@
+/* CSS to make the video fill the entire page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Use viewport height instead of percentage */
+    /*overflow: hidden; /* Remove comment to hide overflow */
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 2.5rem;
+}
+
+.md-header__topic:first-child {
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: fantasy;
+    top: 5px;
+}
+.md-typeset h1, .md-typeset h2 {
+    font-weight: 200;
+    /* font-family: fantasy; */
+    letter-spacing: -.01em;
+}
+#video-background {
+    position: fixed;
+    top: 0; /* Adjust positioning to top */
+    left: 0; /* Adjust positioning to left */
+    width: 100%; /* Use 100% width */
+    height: 100%; /* Use 100% height */
+    z-index: -1000;
+    object-fit: cover; /* Add object-fit property */
+    background-size: cover;
+}
+
+/* Optional: Add additional styling for content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    /* position: absolute; */
+    /* bottom: 80px;
+    right: 80px; */
+    padding: 15px 30px;
+    background-color: black;
+    color: #ffffff;
+    border: 2px solid white;
+    /*border-radius: 5px;*/
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity:0.8;
+    transition: background-color 0.3s;
+}
+
+.title-font {
+    font-size: 6rem !important;
+    font-weight: bold;
+    font-family: "Arial Black", sans-serif;
+    color: rgb(213, 213, 213) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0 -2rem !important;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+.gallery-item {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.gallery-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.gallery-item-large img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.caption {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item-large .caption {
+    position: absolute;
+    bottom: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+}
+.gallery-item-large:hover .caption {
+    opacity: 1;
+}
+
+/* Carousel */
+#banner {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+  }
+  #banner img {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  #thumbnails {
+	margin-top: 10px;
+	text-align: center;
+  }
+  #thumbnails img {
+	width: 80px;
+	height: auto;
+	margin: 0 5px;
+	cursor: pointer;
+  }
+  #prevBtn, #nextBtn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	cursor: pointer;
+	z-index: 2;
+  }
+  #prevBtn {
+	left: 0;
+  }
+  #nextBtn {
+	right: 0;
+  }
+
+/* circular image */
+/* Style for circular image */
+.circular-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /*Makes the image circular*/
+    overflow: hidden;
+}
+
+/* Style for image link */
+.circular-image-link {
+    display: inline-block;
+    text-decoration: none; /* Removes underline from the link */
+}
+
+small {
+    font-size: small;
+}
+
+.project-thumb {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
